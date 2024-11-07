@@ -1,0 +1,53 @@
+<h5 class="card-title text-center" id="main">Inventario disponible</h5>
+<ngb-carousel *ngIf="c2" id="main">
+  <ng-template ngbSlide>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div id="c1" class="card-img-top"></div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Mesas de cursos</h5>
+            <p class="card-text">
+              Mesas de la facultad de medicina
+            </p>
+            <a href="#" class="btn btn-primary">Solicitar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div id="c2" class="card-img-top"></div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Sillas de sala estudiantil</h5>
+            <p class="card-text">
+              Sillas de la sala estudiantil de la facci
+            </p>
+            <a href="#" class="btn btn-primary">Solicitar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template ngbSlide>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div id="c3" class="card-img-top"></div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Proyecto</h5>
+            <p class="card-text">
+              Proyector de la sala de conferencias
+            </p>
+            <a href="#" class="btn btn-primary">Solicitar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

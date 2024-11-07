@@ -1,0 +1,36 @@
+.hero-banner {
+  background-image: url('../../../../shared/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 250px;
+  color: white;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #77004f;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #8000b3;
+}

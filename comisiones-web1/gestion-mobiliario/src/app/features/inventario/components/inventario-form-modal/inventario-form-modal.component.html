@@ -1,0 +1,10 @@
+<div>
+  <input type="text" [(ngModel)]="nuevoItem.nombre" placeholder="Nombre" class="form-control mb-2" />
+  <input type="text" [(ngModel)]="nuevoItem.descripcion" placeholder="Descripción" class="form-control mb-2" />
+  <input type="number" [(ngModel)]="nuevoItem.cantidad" placeholder="Cantidad" class="form-control mb-2" />
+  <input type="text" [(ngModel)]="nuevoItem.estado" placeholder="Estado" class="form-control mb-2" />
+  <input type="date" [(ngModel)]="nuevoItem.fecha_adquisicion" placeholder="Fecha de adquisición" class="form-control mb-2" />
+  <input type="text" [(ngModel)]="nuevoItem.facultad" placeholder="Facultad" class="form-control mb-2" />
+  <input type="text" [(ngModel)]="nuevoItem.responsable" placeholder="Responsable" class="form-control mb-2" />
+  <button (click)="agregarItem()" class="btn btn-success">Agregar</button>
+</div>

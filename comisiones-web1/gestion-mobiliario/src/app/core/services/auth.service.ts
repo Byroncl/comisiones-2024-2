@@ -1,26 +1,16 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { User } from "../models/user.model";
+import usuarios from "./json/usuario.json"
 
 @Injectable({
   providedIn: "root",
 })
 export class AuthService {
-  private apiUrl = "https://api.example.com";
+  login(correo: string, contrasena: string): string | null {
+    const usuario = usuarios.find(
+      (user) => user.correo === correo && user.contrasena === contrasena
+    );
 
-  constructor(private http: HttpClient) {}
-
-  login(credentials: { email: string; password: string }): Observable<User> {
-    return this.http.post<User>(`${this.apiUrl}/auth/login`, credentials);
-  }
-
-  isAuthenticated(): boolean {
-    // Lógica para verificar si el usuario está autenticado
-    return !!localStorage.getItem("token");
-  }
-
-  getToken(): string | null {
-    return localStorage.getItem("token");
+    // Retorna el rol sin redirigir
+    return usuario ? usuario.rol : null;
   }
 }

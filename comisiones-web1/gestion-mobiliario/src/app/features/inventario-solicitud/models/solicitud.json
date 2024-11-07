@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre_solicitante": "Diana M",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "pendiente",
+    "nombre": "Silla",
+    "descripcion": "Silla de oficina",
+    "cantidad": 10
+  },
+  {
+    "id": 2,
+    "nombre_solicitante": "Jonathan Marin",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "denegado",
+    "nombre": "Mesa",
+    "descripcion": "Mesa de oficina",
+    "cantidad": 10
+  },
+  {
+    "id": 3,
+    "nombre_solicitante": "Helen D",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "Aceptado",
+    "nombre": "Estante de proyector",
+    "descripcion": "Estante de proyector",
+    "cantidad": 10
+  },
+  {
+    "id": 4,
+    "nombre_solicitante": "Karen R",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "pendiente",
+    "nombre": "Silla",
+    "descripcion": "Silla de oficina",
+    "cantidad": 10
+  },
+  {
+    "id": 5,
+    "nombre_solicitante": "Evelyn R",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "denegado",
+    "nombre": "Mesa",
+    "descripcion": "Mesa de oficina",
+    "cantidad": 10
+  },
+  {
+    "id": 6,
+    "nombre_solicitante": "Byron C",
+    "fecha_solicitud": "2021-01-01",
+    "estado": "Aceptado",
+    "nombre": "Estante de proyector",
+    "descripcion": "Estante de proyector",
+    "cantidad": 10
+  }
+]

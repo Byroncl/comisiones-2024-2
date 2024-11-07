@@ -1,0 +1,102 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+      <app-inventario-side-bar></app-inventario-side-bar>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="col-md-9" id="inventario-filtro">
+      <app-inventario-filter-form
+        (filtroAplicado)="aplicarFiltro($event)"
+      ></app-inventario-filter-form>
+      <button (click)="abrirModal()" class="btn btn-primary my-3">
+        Agregar un nuevo inventario
+      </button>
+      <app-inventario-table #tabla></app-inventario-table>
+
+      <!-- Modal -->
+      <div *ngIf="mostrarModal" class="modal-backdrop">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Agregar Nuevo Item</h5>
+              <button
+                type="button"
+                class="btn-close"
+                (click)="cerrarModal()"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <input
+                  type="text"
+                  [(ngModel)]="nuevoItem.nombre"
+                  placeholder="Nombre"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="text"
+                  [(ngModel)]="nuevoItem.descripcion"
+                  placeholder="Descripción"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="number"
+                  [(ngModel)]="nuevoItem.cantidad"
+                  placeholder="Cantidad"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="text"
+                  [(ngModel)]="nuevoItem.estado"
+                  placeholder="Estado"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="date"
+                  [(ngModel)]="nuevoItem.fecha_adquisicion"
+                  placeholder="Fecha de adquisición"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="text"
+                  [(ngModel)]="nuevoItem.facultad"
+                  placeholder="Facultad"
+                  class="form-control mb-2"
+                />
+                <input
+                  type="text"
+                  [(ngModel)]="nuevoItem.responsable"
+                  placeholder="Responsable"
+                  class="form-control mb-2"
+                />
+              </div>
+            </div>
+            <div class="modal-footer" id="boton">
+              <button (click)="agregarItem()" class="btn btn-success">
+                Agregar
+              </button>
+              <button (click)="cerrarModal()" class="btn btn-secondary">
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <div class="container">
+    <p class="mb-0">© 2023 Johan Palma.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+      <li class="list-inline-item"><a href="#" class="text-white">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+
+
