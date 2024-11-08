@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "servicio": "Cita psicologica",
+    "usuario": "Juan Perez",
+    "fecha": "2021-10-10",
+    "hora": "10:00",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 2,
+    "servicio": "Cita medica",
+    "usuario": "Maria Rodriguez",
+    "fecha": "2021-10-10",
+    "hora": "11:00",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 3,
+    "servicio": "Actividad recreativa",
+    "usuario": "Carlos Sanchez",
+    "fecha": "2021-10-10",
+    "hora": "12:00",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 4,
+    "servicio": "Taller de nutrición",
+    "usuario": "Ana Martinez",
+    "fecha": "2021-10-11",
+    "hora": "09:00",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 5,
+    "servicio": "Consulta odontológica",
+    "usuario": "Luisa Perez",
+    "fecha": "2021-10-11",
+    "hora": "10:30",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 6,
+    "servicio": "Clase de yoga",
+    "usuario": "Pedro Rodriguez",
+    "fecha": "2021-10-11",
+    "hora": "11:00",
+    "estado": "Pendiente"
+  }
+]

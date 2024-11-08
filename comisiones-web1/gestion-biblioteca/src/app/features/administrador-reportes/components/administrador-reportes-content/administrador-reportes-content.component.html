@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4 text-primary">Reportes</h2>
+
+  <!-- Gráfico de barras: Cantidad de libros por autor -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Cantidad de Libros por Autor</h5>
+      <canvas baseChart
+              [data]="barChartData"
+              [labels]="barChartLabels"
+              [options]="chartOptions"
+              [type]="'bar'">
+      </canvas>
+    </div>
+  </div>
+
+  <!-- Gráfico de líneas: Semestres de los usuarios -->
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Distribución de Semestres de los Usuarios</h5>
+      <canvas baseChart
+              [data]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="chartOptions"
+              [type]="'line'">
+      </canvas>
+    </div>
+  </div>
+</div>

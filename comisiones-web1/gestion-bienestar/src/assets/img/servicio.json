@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Citas médicas",
+    "descripcion": "Citas medicas medicina general",
+    "cupos": 11,
+    "img": "../../../shared/img/medico.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Citas odontológicas",
+    "descripcion": "Citas odontológicas",
+    "cupos": 5,
+    "img": "../../../shared/img/odontologo.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Citas de psicologo",
+    "descripcion": "Citas con el psicologo de la institución",
+    "cupos": 18,
+    "img": "../../../shared/img/psicologo.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Actividad recreativa en grupo",
+    "descripcion": "Actividades recreativas en grupo",
+    "cupos": 10,
+    "img": "../../../shared/img/actividad.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Actividad recreativa individual",
+    "descripcion": "Actividades recreativas individuales",
+    "cupos": 10,
+    "img": "../../../shared/img/actividad.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Citas de nutrición",
+    "descripcion": "Citas con el nutricionista de la institución",
+    "cupos": 10,
+    "img": "../../../shared/img/medico.jpg"
+  }
+]

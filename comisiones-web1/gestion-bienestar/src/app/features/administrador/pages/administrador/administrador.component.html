@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <a class="navbar-brand" href="/perfil"><div class="logo"></div></a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/perfil">Gestión de servicios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/perfil-servicio"
+          >Solicitudes recibidas</a
+        >
+      </li>
+    </ul>
+  </div>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Cerrar sesión</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4 display-4 fw-bold text-primary">Gestión de Servicios</h2>
+
+  <!-- Campo de Búsqueda -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar por servicio..."
+        [(ngModel)]="searchQuery"
+        (input)="filterServicios()"
+      />
+    </div>
+    <div class="col-md-6 text-end">
+      <button class="btn btn-success" (click)="crearServicio()">Crear Nuevo Servicio</button>
+    </div>
+  </div>
+
+  <!-- Tabla de Servicios -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th scope="col">Servicio</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Hora</th>
+          <th scope="col">Cupos</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let servicio of filteredServicios">
+          <td>{{ servicio.servicio }}</td>
+          <td>{{ servicio.fecha }}</td>
+          <td>{{ servicio.hora }}</td>
+          <td>{{ servicio.cupos }}</td>
+          <td>
+            <span [ngClass]="{
+              'badge bg-success': servicio.estado === 'Activo',
+              'badge bg-secondary': servicio.estado !== 'Activo'
+            }">
+              {{ servicio.estado }}
+            </span>
+          </td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="editarServicio(servicio)">Editar</button>
+            <button class="btn btn-danger btn-sm" (click)="eliminarServicio(servicio.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

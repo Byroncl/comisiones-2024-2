@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "fecha": "2021-01-01",
+    "hora": "10:00",
+    "servicio": "Consulta psicologica",
+    "especialista": "Dr. Juan Perez",
+    "estado": "Realizado"
+  },
+  {
+    "id": 2,
+    "fecha": "2021-01-01",
+    "hora": "11:00",
+    "servicio": "Participar en actividad grupal",
+    "grupo": "Grupo de autoayuda",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 3,
+    "fecha": "2021-01-01",
+    "hora": "12:00",
+    "servicio": "Consulta medica",
+    "especialista": "Dra. Maria Rodriguez",
+    "estado": "Cancelado"
+  }
+]

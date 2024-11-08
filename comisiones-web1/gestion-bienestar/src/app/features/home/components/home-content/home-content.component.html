@@ -1,0 +1,224 @@
+<div class="container my-5">
+  <h2 class="text-center mb-5 display-4 fw-bold text-primary">
+    Departamento del bienestar estudiantil
+  </h2>
+  <!-- Alerta personalizada -->
+  <div *ngIf="alertType" class="alert-box" [ngClass]="alertType">
+    <div class="alert-icon">
+      <i [ngClass]="getIconClass(alertType)"></i>
+    </div>
+    <div class="alert-content">
+      <h4 class="alert-title">{{ alertTitle }}</h4>
+      <p class="alert-message">{{ alertMessage }}</p>
+    </div>
+    <button class="alert-close" (click)="closeAlert()">×</button>
+  </div>
+</div>
+<div class="row g-4">
+  <!-- Bienestar de Salud -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg h-100 border-0">
+      <div class="card-body">
+        <h5 class="card-title text-center fw-bold text-success">
+          Bienestar de Salud
+        </h5>
+        <p class="card-text text-justify">
+          Cuidar nuestra salud física es fundamental para mantener un equilibrio
+          en nuestro bienestar.
+        </p>
+        <div class="d-grid">
+          <button
+            class="btn btn-outline-success mt-3"
+            (click)="learnMore('salud')"
+          >
+            Aprender más
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aspectos Psicológicos -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg h-100 border-0">
+      <div class="card-body">
+        <h5 class="card-title text-center fw-bold text-info">
+          Aspectos Psicológicos
+        </h5>
+        <p class="card-text text-justify">
+          La salud mental es tan importante como la salud física. Practicar la
+          meditación, mantener relaciones saludables y buscar ayuda cuando sea
+          necesario.
+        </p>
+        <div class="d-grid">
+          <button
+            class="btn btn-outline-info mt-3"
+            (click)="learnMore('psicologicos')"
+          >
+            Aprender más
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actividades Recreativas -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg h-100 border-0">
+      <div class="card-body">
+        <h5 class="card-title text-center fw-bold text-warning">
+          Actividades Recreativas
+        </h5>
+        <p class="card-text text-justify">
+          Participar en actividades recreativas ayuda a reducir el estrés y
+          mejorar el estado de ánimo.
+        </p>
+        <div class="d-grid">
+          <button
+            class="btn btn-outline-warning mt-3"
+            (click)="learnMore('recreativas')"
+          >
+            Aprender más
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compañerismo -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg h-100 border-0">
+      <div class="card-body">
+        <h5 class="card-title text-center fw-bold text-secondary">
+          Compañerismo
+        </h5>
+        <p class="card-text text-justify">
+          El compañerismo fortalece los lazos entre las personas y fomenta un
+          ambiente de respeto y apoyo.
+        </p>
+        <div class="d-grid">
+          <button
+            class="btn btn-outline-secondary mt-3"
+            (click)="learnMore('companerismo')"
+          >
+            Aprender más
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <h2 class="text-center mb-5 display-4 fw-bold text-primary">
+    Recomendaciones
+  </h2>
+
+  <!-- Carrusel de Bienestar de Salud -->
+  <h3 class="text-center text-success">Bienestar de Salud</h3>
+  <ngb-carousel *ngIf="true" id="salud-carousel">
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Ejercicio Regular</h5>
+              <p class="card-text">
+                Mantener una rutina de ejercicio físico contribuye a mejorar nuestra salud y bienestar general.
+              </p>
+              <a href="/servicios" class="btn btn-outline-success">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Alimentación Balanceada</h5>
+              <p class="card-text">
+                Seguir una dieta equilibrada es esencial para mantener la energía y la salud en óptimas condiciones.
+              </p>
+              <a href="/servicios" class="btn btn-outline-success">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Chequeos Médicos</h5>
+              <p class="card-text">
+                Realizar chequeos médicos periódicos ayuda a prevenir enfermedades y cuidar la salud a largo plazo.
+              </p>
+              <a href="/servicios" class="btn btn-outline-success">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- Carrusel de Aspectos Psicológicos -->
+  <h3 class="text-center text-info mt-5">Aspectos Psicológicos</h3>
+  <ngb-carousel *ngIf="true" id="psicologicos-carousel">
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Mindfulness</h5>
+              <p class="card-text">
+                La práctica del mindfulness ayuda a reducir el estrés y mejorar el enfoque.
+              </p>
+              <a href="/servicios" class="btn btn-outline-info">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Relaciones Saludables</h5>
+              <p class="card-text">
+                Mantener relaciones positivas contribuye al bienestar emocional.
+              </p>
+              <a href="/servicios" class="btn btn-outline-info">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Gestión del Estrés</h5>
+              <p class="card-text">
+                Aprender a manejar el estrés es clave para una buena salud mental.
+              </p>
+              <a href="/servicios" class="btn btn-outline-info">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <!-- Repite el mismo formato para "Actividades Recreativas" y "Compañerismo" -->
+
+</div>

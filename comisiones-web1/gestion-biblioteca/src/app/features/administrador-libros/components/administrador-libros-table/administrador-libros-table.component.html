@@ -1,0 +1,108 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4 text-primary">Lista de Libros</h2>
+ <app-administrador-libros-filtro (filtroAplicado)="aplicarFiltro($event)"></app-administrador-libros-filtro>
+
+  <!-- Botón para añadir un nuevo libro -->
+  <div class="text-end mb-3">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal">Añadir Libro</button>
+  </div>
+
+  <!-- Tabla de Libros -->
+  <table class="table table-hover table-bordered">
+    <thead class="table-primary">
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros">
+        <td>{{ libro.id }}</td>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.autor }}</td>
+        <td>{{ libro.descripcion }}</td>
+        <td><img [src]="libro.imagen" alt="{{ libro.titulo }}" class="img-thumbnail" style="width: 50px; height: auto;"></td>
+        <td>
+          <button class="btn btn-warning btn-sm" (click)="editarLibro(libro)" data-bs-toggle="modal" data-bs-target="#editBookModal">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="eliminarLibro(libro.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal para Añadir Libro -->
+  <div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addBookModalLabel">Añadir Libro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="agregarLibro()">
+            <div class="mb-3">
+              <label for="titulo" class="form-label">Título</label>
+              <input type="text" id="titulo" [(ngModel)]="nuevoLibro.titulo" name="titulo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="autor" class="form-label">Autor</label>
+              <input type="text" id="autor" [(ngModel)]="nuevoLibro.autor" name="autor" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea id="descripcion" [(ngModel)]="nuevoLibro.descripcion" name="descripcion" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="imagen" class="form-label">URL de la Imagen</label>
+              <input type="text" id="imagen" [(ngModel)]="nuevoLibro.imagen" name="imagen" class="form-control" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Editar Libro -->
+  <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editBookModalLabel">Editar Libro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" *ngIf="libroEditando">
+          <form (ngSubmit)="guardarEdicion()">
+            <div class="mb-3">
+              <label for="editTitulo" class="form-label">Título</label>
+              <input type="text" id="editTitulo" [(ngModel)]="libroEditando.titulo" name="editTitulo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="editAutor" class="form-label">Autor</label>
+              <input type="text" id="editAutor" [(ngModel)]="libroEditando.autor" name="editAutor" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="editDescripcion" class="form-label">Descripción</label>
+              <textarea id="editDescripcion" [(ngModel)]="libroEditando.descripcion" name="editDescripcion" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="editImagen" class="form-label">URL de la Imagen</label>
+              <input type="text" id="editImagen" [(ngModel)]="libroEditando.imagen" name="editImagen" class="form-control" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

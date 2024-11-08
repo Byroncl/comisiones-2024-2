@@ -1,0 +1,17 @@
+.logo {
+  background-image: url("/assets/img/logo.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 100px;
+}
+
+#navbar {
+  background-color: #347fca !important;
+}
+
+.nav-link{
+  border-radius: 50px;
+}
+.nav-link:hover {
+  background-color: rgb(59, 179, 179);
+}

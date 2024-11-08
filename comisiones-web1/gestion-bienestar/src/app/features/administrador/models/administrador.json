@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "servicio": "Cita psicologica",
+    "fecha": "2021-10-10",
+    "hora": "10:00",
+    "cupos": 10,
+    "estado": "Activo"
+  },
+  {
+    "id": 2,
+    "servicio": "Cita medica",
+    "fecha": "2021-10-10",
+    "hora": "11:00",
+    "cupos": 15,
+    "estado": "Activo"
+  },
+  {
+    "id": 3,
+    "servicio": "Actividad recreativa",
+    "fecha": "2021-10-10",
+    "hora": "12:00",
+    "cupos": 20,
+    "estado": "Activo"
+  },
+  {
+    "id": 4,
+    "servicio": "Taller de nutrición",
+    "fecha": "2021-10-11",
+    "hora": "09:00",
+    "cupos": 25,
+    "estado": "Activo"
+  },
+  {
+    "id": 5,
+    "servicio": "Consulta odontológica",
+    "fecha": "2021-10-11",
+    "hora": "10:30",
+    "cupos": 10,
+    "estado": "Activo"
+  },
+  {
+    "id": 6,
+    "servicio": "Clase de yoga",
+    "fecha": "2021-10-11",
+    "hora": "11:00",
+    "cupos": 20,
+    "estado": "Activo"
+  }
+]

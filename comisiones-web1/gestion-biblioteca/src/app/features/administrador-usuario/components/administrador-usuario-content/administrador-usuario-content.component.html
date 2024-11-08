@@ -1,0 +1,25 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Facultad</th>
+      <th scope="col">Carrera</th>
+      <th scope="col">Semestre</th>
+      <th scope="col">Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of usuarioFiltrado; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ item.nombre }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.facultad }}</td>
+      <td>{{ item.carrera }}</td>
+      <td>{{ item.semestre }}</td>
+      <td>{{ item.telefono }}</td>
+    </tr>
+  </tbody>
+</table>

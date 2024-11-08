@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "email": "juan@gmail.com",
+    "facultad": "Ingenieria",
+    "carrera": "Ingenieria Industrial",
+    "semestre": 6,
+    "telefono": "1234567890"
+  }
+]
